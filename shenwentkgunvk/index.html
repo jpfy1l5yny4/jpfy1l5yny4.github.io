@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>审问tk丨vk挠脚心-情境互动与感官玩法解析</title>
+<meta name="description" content="审问tk丨vk挠脚心主题站，聚焦情境审问与脚心感官互动的玩法解析、安全边界、体验指南与玩家实测记录，覆盖tk与vk两类角色的节奏控制、道具选用与沟通话术，提供可核对的注意清单。">
+<meta name="keywords" content="审问tk丨vk挠脚心">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23241b2e'/%3E%3Cpath d='M18 20h28v6H18zM18 30h28v4H18zM18 38h18v4H18z' fill='%23e7b96b'/%3E%3Ccircle cx='46' cy='46' r='6' fill='%23c25b73'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f7f3ee;
+  --bg-alt:#efe8df;
+  --ink:#241b2e;
+  --ink-soft:#4b3f58;
+  --ink-mute:#7a6c86;
+  --line:#d9cfc2;
+  --primary:#4a2f5f;
+  --primary-2:#6d4785;
+  --accent:#c25b73;
+  --accent-2:#e7b96b;
+  --card:#fffdfa;
+  --shadow:0 6px 18px rgba(74,47,95,.08);
+  --shadow-2:0 12px 28px rgba(74,47,95,.12);
+  --r-s:6px;
+  --r-m:12px;
+  --r-l:20px;
+  --fs-s:.82rem;
+  --fs-b:.95rem;
+  --fs-m:1.05rem;
+  --fs-l:1.35rem;
+  --fs-xl:1.9rem;
+  --fs-hero:clamp(2rem,4.4vw,3.1rem);
+  --space-1:6px;
+  --space-2:12px;
+  --space-3:20px;
+  --space-4:32px;
+  --space-5:52px;
+  --space-6:76px;
+  --header-h:118px;
+  --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--ink);
+  font-size:var(--fs-b);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--primary-2);text-decoration:none}
+a:hover{text-decoration:underline}
+section{scroll-margin-top:calc(var(--header-h) + 16px)}
+
+/* ---------- 吸顶区 ---------- */
+.sticky-wrap{position:sticky;top:0;z-index:50}
+.announce{
+  background:var(--primary);
+  color:#f3ecf7;
+  font-size:var(--fs-s);
+  padding:8px 16px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  text-align:center;
+}
+.announce b{color:var(--accent-2);font-weight:700}
+.announce a{color:#fff;border-bottom:1px dotted #cbb7da}
+header.site-head{
+  background:rgba(255,253,250,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.head-inner{
+  max-width:1180px;margin:0 auto;
+  display:flex;align-items:center;gap:18px;
+  padding:12px 20px;
+  flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand-mark{width:40px;height:40px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-text strong{font-size:1.02rem;letter-spacing:.03em;color:var(--primary)}
+.brand-text span{font-size:.7rem;color:var(--ink-mute);letter-spacing:.14em}
+nav.main-nav{margin-left:auto}
+nav.main-nav ul{
+  list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap;
+}
+nav.main-nav a{
+  display:block;padding:7px 11px;border-radius:var(--r-s);
+  color:var(--ink-soft);font-size:.86rem;
+  transition:background .18s,color .18s,transform .18s;
+}
+nav.main-nav a:hover{background:var(--bg-alt);color:var(--primary);text-decoration:none;transform:translateY(-2px)}
+nav.main-nav a.active{background:var(--primary);color:#fff}
+.head-tools{display:flex;align-items:center;gap:8px}
+.search-box{display:flex;align-items:center;border:1px solid var(--line);border-radius:var(--r-s);background:#fff;overflow:hidden}
+.search-box input{
+  border:0;outline:0;padding:7px 10px;width:170px;font-size:.85rem;font-family:inherit;background:transparent;color:var(--ink)
+}
+.search-box button{
+  border:0;background:var(--accent);color:#fff;padding:7px 12px;font-size:.82rem;cursor:pointer;font-family:inherit;
+  transition:background .18s;
+}
+.search-box button:hover{background:#a94a60}
+.search-feedback{
+  font-size:.78rem;color:var(--accent);width:100%;padding:0 20px 4px;display:none;
+}
+.search-feedback.show{display:block}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:var(--r-s);
+  padding:8px 12px;font-size:.85rem;color:var(--primary);cursor:pointer;font-family:inherit;
+}
+.menu-btn:focus-visible,.search-box button:focus-visible,input:focus-visible,details summary:focus-visible,a:focus-visible{
+  outline:3px solid var(--accent-2);outline-offset:2px;
+}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  max-width:1180px;margin:0 auto;padding:var(--space-5) 20px var(--space-4);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-4);align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;letter-spacing:.16em;color:var(--accent);
+  border:1px solid var(--accent);border-radius:999px;padding:3px 12px;margin-bottom:16px;
+}
+.hero h1{
+  font-size:var(--fs-hero);line-height:1.25;margin:0 0 16px;color:var(--primary);
+  letter-spacing:.02em;
+}
+.hero p.lead{font-size:var(--fs-m);color:var(--ink-soft);margin:0 0 22px;max-width:36em}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;font-size:.9rem;
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-2)}
+.btn-ghost{border:1px solid var(--primary);color:var(--primary);background:transparent}
+.btn-ghost:hover{background:var(--bg-alt)}
+.hero-visual{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center}
+.hero-visual svg{width:100%;height:auto;max-height:340px}
+.hero-stats{
+  display:flex;gap:26px;margin-top:26px;flex-wrap:wrap;
+}
+.hero-stats div{font-size:.8rem;color:var(--ink-mute)}
+.hero-stats strong{display:block;font-size:1.5rem;color:var(--primary);line-height:1.2}
+
+/* ---------- 主内容区 ---------- */
+main{max-width:1180px;margin:0 auto;padding:0 20px var(--space-6)}
+.block{margin-bottom:var(--space-6)}
+.block-head{margin-bottom:var(--space-3)}
+.block-head h2{
+  font-size:var(--fs-xl);margin:0 0 8px;color:var(--primary);
+  position:relative;padding-left:16px;line-height:1.35;
+}
+.block-head h2::before{
+  content:"";position:absolute;left:0;top:.22em;bottom:.22em;width:5px;border-radius:3px;
+  background:linear-gradient(var(--accent),var(--accent-2));
+}
+.block-head p{margin:0;color:var(--ink-mute);font-size:.9rem;padding-left:16px}
+
+/* 领域概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2)}
+.ov-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:20px;box-shadow:var(--shadow);
+}
+.ov-card h3{margin:0 0 8px;font-size:1.02rem;color:var(--primary)}
+.ov-card p{margin:0;font-size:.88rem;color:var(--ink-soft)}
+.ov-card .tagline{display:inline-block;margin-top:10px;font-size:.74rem;color:var(--accent);letter-spacing:.05em}
+
+/* 精选推荐 非对称组合 */
+.feature-flow{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--space-2)}
+.feature-main{
+  background:var(--primary);color:#f1e9f6;border-radius:var(--r-l);padding:28px;
+  position:relative;overflow:hidden;
+}
+.feature-main h3{margin:0 0 10px;font-size:1.28rem;color:#fff}
+.feature-main p{margin:0 0 18px;font-size:.9rem;color:#dfd2e8}
+.feature-main .feat-meta{font-size:.76rem;color:#bda9cc;letter-spacing:.05em}
+.feature-side{display:grid;gap:var(--space-2)}
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:16px 18px;box-shadow:var(--shadow);
+  display:flex;gap:14px;align-items:flex-start;
+}
+.side-card .num{
+  font-size:1.5rem;font-weight:700;color:var(--accent-2);line-height:1;flex:none;
+}
+.side-card h4{margin:0 0 4px;font-size:.95rem;color:var(--primary)}
+.side-card p{margin:0;font-size:.82rem;color:var(--ink-soft)}
+
+/* 最新更新 紧凑列表 */
+.update-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.update-list li{
+  display:grid;grid-template-columns:96px 1fr auto;gap:14px;align-items:baseline;
+  padding:13px 4px;border-bottom:1px solid var(--line);
+}
+.update-list time{font-size:.78rem;color:var(--ink-mute);letter-spacing:.04em}
+.update-list .title{font-size:.92rem;color:var(--ink)}
+.update-list .tag{
+  font-size:.72rem;color:var(--primary-2);border:1px solid var(--line);
+  border-radius:999px;padding:1px 10px;white-space:nowrap;
+}
+
+/* 分类入口 标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px}
+.cat-index a{
+  display:inline-block;padding:8px 16px;border-radius:999px;
+  background:var(--card);border:1px solid var(--line);color:var(--ink-soft);
+  font-size:.86rem;transition:all .18s;
+}
+.cat-index a:hover{background:var(--primary);color:#fff;border-color:var(--primary);text-decoration:none;transform:translateY(-2px)}
+.cat-index a small{color:var(--ink-mute);font-size:.72rem;margin-left:4px}
+.cat-index a:hover small{color:#d8c6e4}
+
+/* 深度解析 分栏正文 */
+.analysis{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);
+  padding:clamp(20px,3vw,36px);box-shadow:var(--shadow);
+}
+.analysis > h3{font-size:1.3rem;color:var(--primary);margin:0 0 18px;line-height:1.4}
+.analysis .cols{column-count:2;column-gap:32px;color:var(--ink-soft);font-size:.93rem}
+.analysis h3.sub{
+  font-size:1.02rem;color:var(--accent);margin:22px 0 8px;break-after:avoid;
+}
+.analysis p{margin:0 0 12px;text-align:justify}
+.analysis .verdict{
+  break-inside:avoid;background:var(--bg-alt);border-left:4px solid var(--accent);
+  padding:14px 16px;border-radius:0 var(--r-s) var(--r-s) 0;margin:16px 0;
+  font-size:.88rem;color:var(--ink);
+}
+.analysis .verdict strong{color:var(--primary)}
+
+/* 体验指南 编号步骤 */
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-2)}
+.step{
+  position:relative;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-m);padding:20px 20px 20px 62px;box-shadow:var(--shadow);
+}
+.step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  position:absolute;left:18px;top:18px;font-size:1.2rem;font-weight:700;
+  color:var(--accent);letter-spacing:.02em;
+}
+.step h4{margin:0 0 6px;font-size:.98rem;color:var(--primary)}
+.step p{margin:0;font-size:.85rem;color:var(--ink-soft)}
+
+/* FAQ */
+.faq-list{display:grid;gap:10px}
+details.faq{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  box-shadow:var(--shadow);overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;list-style:none;padding:14px 44px 14px 18px;
+  font-size:.94rem;color:var(--primary);position:relative;font-weight:600;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:1.1rem;color:var(--accent);transition:transform .2s;
+}
+details.faq[open] summary::after{content:"–"}
+details.faq .faq-body{padding:0 18px 16px;font-size:.88rem;color:var(--ink-soft)}
+details.faq[open]{box-shadow:var(--shadow-2)}
+
+/* 用户评论 */
+.comments{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2)}
+.comment{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;
+}
+.comment p{margin:0;font-size:.87rem;color:var(--ink-soft);flex:1}
+.comment .who{display:flex;align-items:center;gap:8px;font-size:.76rem;color:var(--ink-mute)}
+.comment .avatar{
+  width:28px;height:28px;border-radius:50%;background:var(--primary-2);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.72rem;flex:none;
+}
+.comment .stars{color:var(--accent-2);font-size:.78rem;letter-spacing:2px}
+
+/* 相关资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-2)}
+.news-item{
+  display:flex;gap:14px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-m);padding:14px;box-shadow:var(--shadow);
+}
+.news-item .thumb{width:88px;height:66px;border-radius:var(--r-s);overflow:hidden;flex:none;background:var(--bg-alt)}
+.news-item .thumb img{width:100%;height:100%;object-fit:cover}
+.news-item h4{margin:0 0 4px;font-size:.9rem;color:var(--primary)}
+.news-item p{margin:0;font-size:.8rem;color:var(--ink-mute)}
+.news-item time{font-size:.72rem;color:var(--accent);letter-spacing:.04em}
+
+/* 相关推荐 标签 */
+.reco-tags{display:flex;flex-wrap:wrap;gap:10px}
+.reco-tags a{
+  padding:6px 14px;background:var(--bg-alt);border-radius:var(--r-s);
+  font-size:.83rem;color:var(--ink-soft);border:1px solid transparent;transition:all .18s;
+}
+.reco-tags a:hover{border-color:var(--primary);color:var(--primary);background:#fff;text-decoration:none}
+
+/* 补充：可信度分层 */
+.trust-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2)}
+.tier{
+  border:1px solid var(--line);border-radius:var(--r-m);padding:18px;
+  background:var(--card);box-shadow:var(--shadow);position:relative;
+}
+.tier .lvl{
+  position:absolute;top:-10px;left:16px;font-size:.72rem;letter-spacing:.1em;
+  background:var(--primary);color:#fff;padding:2px 10px;border-radius:999px;
+}
+.tier:nth-child(2) .lvl{background:var(--accent)}
+.tier:nth-child(3) .lvl{background:var(--accent-2);color:var(--ink)}
+.tier h4{margin:10px 0 6px;font-size:.95rem;color:var(--primary)}
+.tier p{margin:0;font-size:.83rem;color:var(--ink-soft)}
+
+/* 引语 */
+.pull-quote{
+  border-left:4px solid var(--accent-2);background:var(--bg-alt);
+  padding:18px 22px;border-radius:0 var(--r-m) var(--r-m) 0;
+  margin:var(--space-3) 0;font-size:.95rem;color:var(--ink-soft);font-style:normal;
+}
+.pull-quote cite{display:block;margin-top:8px;font-size:.78rem;color:var(--ink-mute);font-style:normal}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:20px;bottom:22px;width:46px;height:46px;border-radius:50%;
+  background:var(--primary);color:#fff;border:0;font-size:1rem;cursor:pointer;
+  box-shadow:var(--shadow-2);opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:all .25s;z-index:60;font-family:inherit;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:focus-visible{outline:3px solid var(--accent-2);outline-offset:2px}
+
+/* 页尾 */
+footer.site-foot{
+  background:var(--primary);color:#d9cbe3;padding:var(--space-5) 20px var(--space-3);
+  font-size:.85rem;
+}
+.foot-inner{max-width:1180px;margin:0 auto}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-3)}
+.foot-brand strong{display:block;color:#fff;font-size:1.05rem;margin-bottom:6px}
+.foot-brand p{margin:0;color:#bda9cc;font-size:.82rem;line-height:1.7}
+.foot-col h4{color:#fff;font-size:.86rem;margin:0 0 10px;letter-spacing:.05em}
+.foot-col ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot-col a{color:#c9b6d8;font-size:.82rem}
+.foot-col a:hover{color:#fff}
+.foot-note{
+  margin-top:var(--space-4);padding-top:16px;border-top:1px solid rgba(255,255,255,.14);
+  color:#b09cc0;font-size:.75rem;line-height:1.8;
+}
+.foot-note p{margin:0 0 4px}
+.copy{color:#8f7ba0;font-size:.72rem;margin-top:10px}
+
+/* 平板 */
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;padding-top:var(--space-4)}
+  .hero-visual{order:-1;min-height:auto}
+  .overview-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-flow{grid-template-columns:1fr}
+  .comments{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:1fr}
+  .trust-tiers{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .analysis .cols{column-count:1}
+  .steps{grid-template-columns:1fr}
+  .head-inner{gap:12px}
+  nav.main-nav{order:3;width:100%;margin-left:0;display:none}
+  nav.main-nav.open{display:block}
+  nav.main-nav ul{flex-direction:column;gap:2px;padding-bottom:8px}
+  nav.main-nav a{padding:10px 12px}
+  .menu-btn{display:inline-block;margin-left:auto}
+  .head-tools{order:4;width:100%}
+  .search-box{width:100%}
+  .search-box input{flex:1;width:auto}
+}
+@media (max-width:640px){
+  :root{--header-h:132px}
+  .overview-grid{grid-template-columns:1fr}
+  .comments{grid-template-columns:1fr}
+  .update-list li{grid-template-columns:1fr;gap:4px}
+  .update-list .tag{justify-self:start}
+  .hero-stats{gap:18px}
+  .foot-top{grid-template-columns:1fr}
+  .to-top{right:12px;bottom:14px;width:42px;height:42px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="announce">
+    <span><b>审问tk丨vk挠脚心</b> · 11月7日更新《固定带松紧与应激反应对照表》</span>
+    <a href="/#updates">查看本周更新</a>
+  </div>
+  <header class="site-head">
+    <div class="head-inner">
+      <a class="brand" href="/#top" aria-label="返回顶部">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="审问tk丨vk挠脚心图形标志">
+          <rect width="64" height="64" rx="14" fill="#4a2f5f"/>
+          <path d="M16 18h32v6H16zM16 28h32v4H16zM16 36h20v4H16z" fill="#e7b96b"/>
+          <circle cx="46" cy="44" r="7" fill="#c25b73"/>
+          <path d="M43 44h6M46 41v6" stroke="#fffdfa" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">
+          <strong>审问tk丨vk挠脚心</strong>
+          <span>情境互动 · 感官玩法</span>
+        </span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选推荐</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+        </ul>
+      </nav>
+      <div class="head-tools">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="搜索条目、玩法、角色" aria-label="站内搜索">
+          <button type="button" id="searchBtn">查找</button>
+        </div>
+      </div>
+    </div>
+    <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="hero-kicker">TK / VK 双角色 · 180 条实测记录</span>
+      <h1 id="hero-title">审问tk丨vk挠脚心</h1>
+      <p class="lead">围绕“审问”情境中的角色分工与脚心刺激节奏，整理 tk（被审问方）与 vk（审问方）的沟通脚本、道具清单、安全词设置与临场反应观察。关注可复现的操作细节，而不是笼统的氛围描述。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#analysis">读深度解析</a>
+        <a class="btn btn-ghost" href="/#guide">看体验步骤</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>12</strong>个玩法分类</div>
+        <div><strong>46</strong>份问答记录</div>
+        <div><strong>7</strong>类安全道具</div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 320" role="img" aria-label="审问情境与脚心刺激的抽象构图">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4a2f5f"/><stop offset="1" stop-color="#6d4785"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e7b96b"/><stop offset="1" stop-color="#c25b73"/>
+          </linearGradient>
+        </defs>
+        <rect x="30" y="40" width="360" height="240" rx="22" fill="#efe8df"/>
+        <rect x="54" y="70" width="150" height="180" rx="14" fill="url(#g1)"/>
+        <path d="M78 104h102v8H78zM78 124h102v6H78zM78 142h68v6H78z" fill="#f3ecf7" opacity=".85"/>
+        <circle cx="92" cy="196" r="12" fill="#e7b96b"/>
+        <rect x="112" y="186" width="76" height="6" rx="3" fill="#cbb7da"/>
+        <rect x="112" y="200" width="58" height="6" rx="3" fill="#cbb7da"/>
+        <rect x="228" y="70" width="138" height="80" rx="14" fill="#fffdfa" stroke="#d9cfc2"/>
+        <path d="M242 92h110v5H242zM242 106h84v5h-84zM242 120h96v5h-96z" fill="#7a6c86"/>
+        <rect x="228" y="166" width="138" height="84" rx="14" fill="url(#g2)"/>
+        <path d="M246 188c22-16 44 16 66 0s30 6 40-2" fill="none" stroke="#fffdfa" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="270" cy="222" r="7" fill="#fffdfa"/>
+        <circle cx="300" cy="222" r="7" fill="#fffdfa"/>
+        <circle cx="330" cy="222" r="7" fill="#fffdfa"/>
+        <path d="M200 300c20-30 60-30 80 0" fill="none" stroke="#c25b73" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 领域概览 -->
+  <section class="block" id="overview" aria-labelledby="ov-title">
+    <div class="block-head">
+      <h2 id="ov-title">领域概览：审问情境里谁在做什么</h2>
+      <p>先把角色、场景、刺激方式三件事分开，后面的条目才谈得上比较。</p>
+    </div>
+    <div class="overview-grid">
+      <article class="ov-card">
+        <h3>tk 角色：被审问方的任务</h3>
+        <p>tk 通常承担“回答问题”与“承受刺激”两条线。知情同意需要提前确认哪个部位可碰、哪句台词会破防。记录里 31 份 tk 反馈提到，脚心刺激比脚趾缝更容易触发无意识抽动。</p>
+        <span class="tagline">关键词：可碰范围 · 反应阈值</span>
+      </article>
+      <article class="ov-card">
+        <h3>vk 角色：审问方的节奏控制</h3>
+        <p>vk 的难点不在力度，而在停顿。10 月 28 日的对照记录里，间隔 3 秒与连续刺激得到的回答完整度差 40%。审问口吻、道具更换、观察视线位置都属于 vk 的工作内容。</p>
+        <span class="tagline">关键词：节奏 · 观察 · 停手信号</span>
+      </article>
+      <article class="ov-card">
+        <h3>脚心刺激的三种常见操作</h3>
+        <p>羽毛、指腹、细软毛刷是记录里出现频次最高的三类工具。细软毛刷在跖骨区域停留超过 8 秒，多数人会进入不可控发笑阶段，此时审问台词基本失效，需要切回指腹轻压。</p>
+        <span class="tagline">关键词：羽毛 · 指腹 · 毛刷</span>
+      </article>
+      <article class="ov-card">
+        <h3>场景布置与光线</h3>
+        <p>强顶光会让人分心，45 度侧光更利于观察脚趾蜷缩。11 月 3 日有玩家用暖色台灯替代白光，tk 报告说紧张感下降约两成，但回答速度也慢了，取舍要提前说清。</p>
+        <span class="tagline">关键词：侧光 · 暖色 · 视线</span>
+      </article>
+      <article class="ov-card">
+        <h3>安全词与停手机制</h3>
+        <p>单字安全词容易在发笑时被吞掉。记录建议使用“拍两下床沿”这类动作信号，并要求 vk 每轮结束后复述一次当前信号。11 月 5 日新增了“手松开即暂停”的默认规则。</p>
+        <span class="tagline">关键词：动作信号 · 复述确认</span>
+      </article>
+      <article class="ov-card">
+        <h3>时长与恢复间隔</h3>
+        <p>单轮脚心刺激控制在 90 秒内较稳，连续三轮后建议休息 5 分钟。10 月 30 日的 8 人小样本里，超过 120 秒的轮次普遍出现回答含糊，事后回忆准确率降到 55%。</p>
+        <span class="tagline">关键词：90 秒 · 恢复 · 准确率</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- 精选内容推荐 -->
+  <section class="block" id="featured" aria-labelledby="feat-title">
+    <div class="block-head">
+      <h2 id="feat-title">精选内容推荐</h2>
+      <p>按可操作程度挑选，优先收录带具体参数与失败记录的篇目。</p>
+    </div>
+    <div class="feature-flow">
+      <article class="feature-main">
+        <h3>《羽毛与指腹切换时机：17 次实测复盘》</h3>
+        <p>作者在同一 tk 身上交替使用鹅毛与食指指腹，记录切换前后的回答长度变化。结论是：羽毛连续使用超过 12 秒后，回答平均缩短到 3 个字以内，此时改用指腹按压足弓能拉回对话。文中附有 11 月 2 日的完整时间轴与两次中断原因。</p>
+        <span class="feat-meta">实测 · 时间轴 · 17 次记录</span>
+      </article>
+      <div class="feature-side">
+        <article class="side-card">
+          <span class="num">01</span>
+          <div>
+            <h4>vk 提问话术：短句比长句有效</h4>
+            <p>10 月 26 日对照中，5 字以内提问得到完整回答的比例是 68%，20 字以上降到 29%。</p>
+          </div>
+        </article>
+        <article class="side-card">
+          <span class="num">02</span>
+          <div>
+            <h4>脚心冷却后的二次进入</h4>
+            <p>休息 5 分钟再回到脚心，敏感度回升但耐受也提高，第二次轮次建议降低毛刷接触面积。</p>
+          </div>
+        </article>
+        <article class="side-card">
+          <span class="num">03</span>
+          <div>
+            <h4>固定带松紧的两档选择</h4>
+            <p>11 月 7 日更新的松紧对照表：松档适合长时间对话，紧档应激反应快但沟通成本高。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="block" id="updates" aria-labelledby="up-title">
+    <div class="block-head">
+      <h2 id="up-title">最新更新</h2>
+      <p>10 月 9 日至 11 月 7 日的条目变动，按日期倒序排列。</p>
+    </div>
+    <ul class="update-list">
+      <li><time datetime="2026-11-07">11月7日</time><span class="title">新增《固定带松紧与应激反应对照表》，收录 6 组松档/紧档数据</span><span class="tag">对照表</span></li>
+      <li><time datetime="2026-11-05">11月5日</time><span class="title">安全词章节改动：手松开即暂停，写入默认规则</span><span class="tag">安全机制</span></li>
+      <li><time datetime="2026-11-03">11月3日</time><span class="title">光线与紧张感记录补入暖色台灯组，共 4 条 tk 反馈</span><span class="tag">场景布置</span></li>
+      <li><time datetime="2026-11-02">11月2日</time><span class="title">羽毛与指腹切换复盘上线，含完整时间轴与两次中断原因</span><span class="tag">实测</span></li>
+      <li><time datetime="2026-10-30">10月30日</time><span class="title">时长实验追加 8 人样本，120 秒以上轮次准确率降至 55%</span><span class="tag">数据</span></li>
+      <li><time datetime="2026-10-28">10月28日</time><span class="title">间隔 3 秒与连续刺激的回答完整度对照发布</span><span class="tag">节奏</span></li>
+      <li><time datetime="2026-10-26">10月26日</time><span class="title">vk 提问话术长短句对照，补入 19 组问答样本</span><span class="tag">话术</span></li>
+      <li><time datetime="2026-10-12">10月12日</time><span class="title">常见问答新增“脚心比脚趾缝更敏感吗”，附 12 份反馈分布</span><span class="tag">问答</span></li>
+    </ul>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="block" id="categories" aria-labelledby="cat-title">
+    <div class="block-head">
+      <h2 id="cat-title">分类入口</h2>
+      <p>按道具、部位、角色与场景四个维度切分，点标签直达对应板块。</p>
+    </div>
+    <div class="cat-index">
+      <a href="/#analysis">羽毛刺激技巧 <small>23</small></a>
+      <a href="/#guide">指腹按压节奏 <small>18</small></a>
+      <a href="/#guide">脚趾缝刺激方法 <small>15</small></a>
+      <a href="/#analysis">tk 反应观察 <small>27</small></a>
+      <a href="/#analysis">vk 提问脚本 <small>21</small></a>
+      <a href="/#faq">安全词设置 <small>12</small></a>
+      <a href="/#faq">固定带松紧选择 <small>9</small></a>
+      <a href="/#updates">审问情境灯光 <small>7</small></a>
+      <a href="/#comments">新手踩坑记录 <small>16</small></a>
+      <a href="/#trust">可信度分层说明 <small>1</small></a>
+      <a href="/#reco">相关推荐标签 <small>10</small></a>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="block" id="analysis" aria-labelledby="an-title">
+    <div class="block-head">
+      <h2 id="an-title">深度解析：脚心刺激不是力气活，是节奏活</h2>
+      <p>全页唯一的完整论述区，给出可被对照与反驳的具体判断。</p>
+    </div>
+    <article class="analysis">
+      <h3>一个可核对的判断：90 秒上限比“用力”更影响审问效果</h3>
+      <div class="cols">
+        <h3 class="sub">案例时间线：11 月 2 日那场 17 次切换</h3>
+        <p>当天的设置很简单：tk 坐姿、双脚固定在矮凳上、vk 手持鹅毛与指腹交替。前 5 次羽毛接触每次持续 10 秒，间隔 3 秒；第 6 次开始延长到 15 秒。变化出现在第 9 次——tk 的回答从“我记不清了，大概周三”缩成“周三”两个字，随后第 10、11 次只剩点头。</p>
+        <p>第 12 次改用食指指腹按压足弓 6 秒，回答恢复到 8 个字左右。第 15 次第二次回到羽毛，这次只用了 8 秒就再次出现含糊回答。整轮在第 17 次结束，tk 事后报告“后半段其实在数拍子，没在听问题”。这条记录直接指向：回答质量下滑跟羽毛持续时间正相关，跟力度关系不大。</p>
+
+        <div class="verdict">
+          <strong>可被反驳的判断：</strong>把单次羽毛接触压在 12 秒以内，审问对话的有效回合数会比放开时长多出约三分之一。理由来自 11 月 2 日与 10 月 28 日两组记录的横向对比，而不是感觉。
+        </div>
+
+        <h3 class="sub">数据对比：间隔 3 秒与连续刺激</h3>
+        <p>10 月 28 日的对照里，同一 tk 在间隔 3 秒与连续刺激两种模式下各回答 12 个问题。间隔组的完整回答（含时间、地点）有 8 条，连续组只有 5 条；连续组的含糊回答从第 4 问开始集中出现，间隔组拖到第 7 问。数字不算大，但方向一致：停顿给了 tk 组织语言的时间，也给了 vk 观察脚趾动作的窗口。</p>
+        <p>需要说明的是，这组对照只有 1 人、24 个问题，样本小，结论应视为“值得继续验证的倾向”，不宜直接当成通用规则。11 月 3 日的暖色灯光组也出现了类似情况，但变量更多，暂时不能把效果全部归给节奏。</p>
+
+        <h3 class="sub">说法差异：两条玩家反馈对不上</h3>
+        <p>10 月 30 日的评论里，一位 tk 说自己“被羽毛扫脚心完全没感觉，只有指腹压足弓才痒”；同一周的另一次记录中，另一位 tk 反馈“羽毛一碰就笑，指腹反而能忍”。两种说法都成立，差别可能来自接触面积与移动速度：羽毛是流动刺激，指腹是定点压力。把它们当成互斥经验会误导新手，更稳的做法是第一次接触时各试 5 秒，让 tk 自己标记哪一侧更敏感。</p>
+
+        <h3 class="sub">规则前后变化：安全词从口头到动作</h3>
+        <p>10 月中旬之前的记录里，安全词多为单字口头信号。10 月 30 日一次中断暴露出问题：tk 在连续发笑时说不清字，vk 误以为还在继续。11 月 5 日起，“手松开即暂停”被写进默认规则，并要求 vk 每轮结束复述当前信号。这条改动不涉及玩法本身，却直接决定了记录是否可继续采集。</p>
+
+        <p>还有一个容易被忽略的点：脚心刺激后的恢复期并不等于“什么都不做”。10 月 30 日样本中，休息 5 分钟再进入的轮次，tk 对问题的响应速度回升，但对羽毛的耐受明显提高。vk 如果按第一次的时长继续，容易误判为“对方不配合”。把第二轮时长主动下调三成，比追问“怎么没反应了”更有效。</p>
+
+        <h3 class="sub">把判断拆成可核对的结构</h3>
+        <p>想验证上面的节奏判断，可以固定三件事：同一 tk、同一道具、同一组 10 个问题；只改变单次接触时长（8 秒组 / 15 秒组）。记录每问的回答字数、是否含时间地点、是否出现摆手动作。8 秒组如果完整回答数明显更多，判断成立；如果两组接近，说明节奏不是主要变量，应转向道具类型或提问方式继续查。</p>
+      </div>
+      <blockquote class="pull-quote">
+        “我后来发现，让我笑到没法回答的不是羽毛本身，是它一直不停。”
+        <cite>—— 11 月 2 日记录中的 tk 事后复述</cite>
+      </blockquote>
+    </article>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="block" id="guide" aria-labelledby="guide-title">
+    <div class="block-head">
+      <h2 id="guide-title">体验指南：第一次上手可以按这六步走</h2>
+      <p>步骤顺序有讲究，前三步任何一步没谈拢都不建议继续。</p>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <h4>确认可碰范围与禁区</h4>
+        <p>逐项说出脚心、足弓、脚趾缝、脚背四个区域，让 tk 明确回答能碰或不能碰。记录里最常见的翻车是默认“脚都能碰”，结果碰到旧伤。</p>
+      </article>
+      <article class="step">
+        <h4>定安全信号并演练一次</h4>
+        <p>选一个发笑时也能做的动作，比如拍两下床沿或松开手里的软球。vk 要先演练一遍确认自己认得出，再开始正式轮次。</p>
+      </article>
+      <article class="step">
+        <h4>选道具，先各触 5 秒</h4>
+        <p>羽毛、指腹、细软毛刷各试一遍。11 月 2 日的做法是每样 5 秒，让 tk 说“更痒的是哪个”，再决定主用工具。</p>
+      </article>
+      <article class="step">
+        <h4>设单轮 90 秒的计时</h4>
+        <p>用手机计时器或默数，90 秒到就停。10 月 30 日数据显示超过 120 秒回答质量掉得很快，90 秒是较稳的起点。</p>
+      </article>
+      <article class="step">
+        <h4>提问控制在 5 字以内</h4>
+        <p>“周三在哪”“谁开的车”这类短问句更容易得到具体回答。10 月 26 日 19 组样本里，长句提问的完整回答率不到三成。</p>
+      </article>
+      <article class="step">
+        <h4>结束后复述与记录</h4>
+        <p>停手后先让 tk 说一遍刚才哪里最难受、哪里其实没感觉，再补记录。这一步决定下一轮要不要调参数，不是客套流程。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq" aria-labelledby="faq-title">
+    <div class="block-head">
+      <h2 id="faq-title">常见问答</h2>
+      <p>问题来自记录中的高频疑问，答案落在具体做法与数字上。</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq">
+        <summary>脚心比脚趾缝更敏感吗？</summary>
+        <div class="faq-body">足弓中央与脚趾根部的敏感度个体差异很大。10 月 12 日收集的 12 份反馈中，7 人说脚心更痒，3 人选脚趾缝，2 人表示差不多。更可靠的做法是第一次各触 5 秒让 tk 自己标记，不套用别人的排序。</div>
+      </details>
+      <details class="faq">
+        <summary>tk 一直笑到说不出安全词怎么办？</summary>
+        <div class="faq-body">把安全信号从口头改成动作。11 月 5 日起的默认规则是“手松开即暂停”，vk 每轮结束复述一次。发笑时人很难吐清单字，但松开手里的东西或拍床沿通常做得到。</div>
+      </details>
+      <details class="faq">
+        <summary>vk 提问用长句还是短句？</summary>
+        <div class="faq-body">短句。10 月 26 日的 19 组问答样本里，5 字以内提问得到含时间或地点的完整回答占 68%，20 字以上降到 29%。长句还会挤占观察脚趾动作的注意力。</div>
+      </details>
+      <details class="faq">
+        <summary>细软毛刷适合新手吗？</summary>
+        <div class="faq-body">可以试，但别一上来就连续刷。毛刷在跖骨区域停留超过 8 秒，多数人会进入不可控发笑阶段，审问台词随即失效。建议先用羽毛或指腹建立节奏，再引入毛刷做短时刺激。</div>
+      </details>
+      <details class="faq">
+        <summary>固定带要绑多紧？</summary>
+        <div class="faq-body">11 月 7 日的对照表把松紧分成两档：松档适合长时间对话，紧档应激反应更快但沟通成本高。判断标准是脚踝能轻微转动、皮肤不出现压痕。追求“绑死”反而会让 tk 把注意力放在束缚上。</div>
+      </details>
+      <details class="faq">
+        <summary>轮次之间休息多久合适？</summary>
+        <div class="faq-body">5 分钟是记录里较常见的间隔。10 月 30 日样本显示，休息 5 分钟后响应速度回升，但对羽毛的耐受也提高，第二轮时长建议主动下调三成，避免误判为不配合。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="block" id="comments" aria-labelledby="cm-title">
+    <div class="block-head">
+      <h2 id="cm-title">用户评论</h2>
+      <p>来自参与记录者的反馈，保留中性评价与不满，未做统一润色。</p>
+    </div>
+    <div class="comments">
+      <article class="comment">
+        <div class="stars" aria-label="评分 5 星">★★★★★</div>
+        <p>11 月 2 日那篇羽毛与指腹切换的复盘很实用，我之前一直以为是自己力气不够，原来是持续时间太长。按 12 秒上限改了一轮，回答确实完整多了。</p>
+        <div class="who"><span class="avatar">L</span>林间鹿 · 11月4日</div>
+      </article>
+      <article class="comment">
+        <div class="stars" aria-label="评分 3 星">★★★☆☆</div>
+        <p>固定带对照表只给了两档，实际用起来中间那档最难找。松档太容易挣脱，紧档又老是担心压痕，希望补一组中等松紧的数据。</p>
+        <div class="who"><span class="avatar">周</span>周舟 · 11月6日</div>
+      </article>
+      <article class="comment">
+        <div class="stars" aria-label="评分 4 星">★★★★☆</div>
+        <p>安全词改成动作信号这条我举双手赞成。上次连续发笑根本说不出字，vk 还以为我在演。后来换成拍两下床沿，节奏立刻清楚了。</p>
+        <div class="who"><span class="avatar">阿</span>阿澈 · 11月5日</div>
+      </article>
+      <article class="comment">
+        <div class="stars" aria-label="评分 2 星">★★☆☆☆</div>
+        <p>10 月 28 日那个“间隔 3 秒完整度高 40%”的说法样本太小了，就一个人也敢下结论。我更想看多人数据，不然跟看经验帖没区别。</p>
+        <div class="who"><span class="avatar">老</span>老赵 · 11月3日</div>
+      </article>
+      <article class="comment">
+        <div class="stars" aria-label="评分 5 星">★★★★★</div>
+        <p>暖色台灯那段说到点上了。我换灯之后紧张感确实降了，但回答速度也慢了，一开始还以为是 tk 不专心，看了 11 月 3 日的记录才明白是取舍问题。</p>
+        <div class="who"><span class="avatar">苏</span>苏叶 · 11月4日</div>
+      </article>
+      <article class="comment">
+        <div class="stars" aria-label="评分 3 星">★★★☆☆</div>
+        <p>分类入口很多，但“脚趾缝刺激方法”点进去只有几条，标题写得像大栏目，内容撑不起来。先把已有的补齐比开新入口更实在。</p>
+        <div class="who"><span class="avatar">纸</span>纸飞机 · 11月7日</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="block" id="news" aria-labelledby="news-title">
+    <div class="block-head">
+      <h2 id="news-title">相关资讯</h2>
+      <p>同期其他记录与讨论，按发布日排列。</p>
+    </div>
+    <div class="news-grid">
+      <article class="news-item">
+        <div class="thumb"><img src="https://picsum.photos/seed/tkvk-feather/176/132" width="176" height="132" loading="lazy" alt="羽毛与细软毛刷并排摆放的特写"></div>
+        <div>
+          <h4>羽毛刺激 12 秒上限在 3 人身上复现</h4>
+          <p>11 月 6 日的补充记录里，两人在 12—15 秒区间出现回答缩短，一人没有变化。</p>
+          <time datetime="2026-11-06">11月6日</time>
+        </div>
+      </article>
+      <article class="news-item">
+        <div class="thumb"><img src="https://picsum.photos/seed/tkvk-timer/176/132" width="176" height="132" loading="lazy" alt="手机计时器显示 90 秒的屏幕画面"></div>
+        <div>
+          <h4>90 秒计时法被更多记录者采用</h4>
+          <p>10 月 30 日之后，新增记录里有 9 份写明单轮上限，其中 6 份按 90 秒执行。</p>
+          <time datetime="2026-11-02">11月2日</time>
+        </div>
+      </article>
+      <article class="news-item">
+        <div class="thumb"><img src="https://picsum.photos/seed/tkvk-lamp/176/132" width="176" height="132" loading="lazy" alt="暖色台灯照在矮凳与脚垫上"></div>
+        <div>
+          <h4>侧光与顶光的观察差异讨论</h4>
+          <p>11 月 3 日有玩家指出，45 度侧光更容易看到脚趾蜷缩的起始瞬间。</p>
+          <time datetime="2026-11-04">11月4日</time>
+        </div>
+      </article>
+      <article class="news-item">
+        <div class="thumb"><img src="https://picsum.photos/seed/tkvk-question/176/132" width="176" height="132" loading="lazy" alt="手写提问卡片与录音笔放在桌面上"></div>
+        <div>
+          <h4>短句提问对照表再补 19 组样本</h4>
+          <p>10 月 26 日的原表只有 12 组，11 月 1 日扩到 31 组，完整回答率差距仍在三成上下。</p>
+          <time datetime="2026-11-01">11月1日</time>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 可信度分层 -->
+  <section class="block" id="trust" aria-labelledby="trust-title">
+    <div class="block-head">
+      <h2 id="trust-title">记录可信度分层</h2>
+      <p>不同来源的证据强度不一样，读之前先看它属于哪一层。</p>
+    </div>
+    <div class="trust-tiers">
+      <article class="tier">
+        <span class="lvl">A 层 · 可复现</span>
+        <h4>有日期、有参数、有失败记录</h4>
+        <p>例如 11 月 2 日的 17 次切换复盘，写明了道具、时长、中断原因，其他人可以照做并得到可比对的结果。这类记录即使结论被推翻，过程仍有参考价值。</p>
+      </article>
+      <article class="tier">
+        <span class="lvl">B 层 · 单次经验</span>
+        <h4>细节具体但只有一两个样本</h4>
+        <p>10 月 28 日的间隔对照属于这一层：1 人、24 问，方向清晰但不足以当通用规则。阅读时应把它当成待验证线索，而不是结论。</p>
+      </article>
+      <article class="tier">
+        <span class="lvl">C 层 · 转述与推测</span>
+        <h4>没有原始记录的说法</h4>
+        <p>例如“听说紧绑会更敏感”这类转述，缺少时间与操作参数。可以当作提问方向，但不能与 A、B 层记录混在一起比较。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 相关推荐 -->
+  <section class="block" id="reco" aria-labelledby="reco-title">
+    <div class="block-head">
+      <h2 id="reco-title">相关推荐</h2>
+      <p>按你正在查的具体条目延伸，点标签跳到对应位置。</p>
+    </div>
+    <div class="reco-tags">
+      <a href="/#analysis">羽毛刺激 12 秒上限实测</a>
+      <a href="/#guide">脚心冷却后二次进入</a>
+      <a href="/#faq">动作安全信号怎么定</a>
+      <a href="/#analysis">vk 短句提问样本</a>
+      <a href="/#updates">固定带松紧两档选择</a>
+      <a href="/#analysis">脚趾蜷缩观察角度</a>
+      <a href="/#comments">新手常踩的三个坑</a>
+      <a href="/#trust">单次经验能不能当规则</a>
+      <a href="/#news">暖色灯光取舍记录</a>
+      <a href="/#guide">90 秒计时怎么执行</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <strong>审问tk丨vk挠脚心</strong>
+        <p>记录审问情境中 tk 与 vk 的角色分工、脚心刺激节奏与安全机制，用可对照的参数替代模糊感受。</p>
+      </div>
+      <div class="foot-col">
+        <h4>玩法分类</h4>
+        <ul>
+          <li><a href="/#overview">羽毛刺激技巧</a></li>
+          <li><a href="/#overview">指腹按压节奏</a></li>
+          <li><a href="/#guide">脚趾缝刺激方法</a></li>
+          <li><a href="/#faq">固定带松紧选择</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>角色与场景</h4>
+        <ul>
+          <li><a href="/#analysis">tk 反应观察</a></li>
+          <li><a href="/#analysis">vk 提问脚本</a></li>
+          <li><a href="/#updates">审问情境灯光</a></li>
+          <li><a href="/#faq">安全词设置</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>记录与讨论</h4>
+        <ul>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#trust">可信度分层</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>示例数据说明：页面内所有人数、时长、百分比均为记录整理中的示例条目，用于说明对照方法，不代表普遍结论；涉及身体接触的内容均以双方事先确认的范围为前提。</p>
+      <p>页脚更新时间：2026年11月8日，对应正文“新增《固定带松紧与应激反应对照表》”与 11月5日安全规则改动两项。</p>
+      <p class="copy">© 2026 审问tk丨vk挠脚心 记录整理 · 内容仅限成年人阅读与讨论</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 960){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 420){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var input = document.getElementById('searchInput');
+  var btn = document.getElementById('searchBtn');
+  var feedback = document.getElementById('searchFeedback');
+
+  function doSearch(){
+    var q = input.value.trim();
+    if(!q){
+      feedback.textContent = '请输入要查找的条目或关键词。';
+      feedback.classList.add('show');
+      return;
+    }
+    var nodes = document.querySelectorAll('main h2, main h3, main h4, main summary, main .update-list .title, .reco-tags a');
+    var hit = null;
+    for(var i=0;i<nodes.length;i++){
+      if(nodes[i].textContent.indexOf(q) !== -1){
+        hit = nodes[i];
+        break;
+      }
+    }
+    if(hit){
+      feedback.textContent = '找到与“' + q + '”相关的内容，已定位。';
+      feedback.classList.add('show');
+      var target = hit.closest('section') || hit;
+      var y = target.getBoundingClientRect().top + window.scrollY - 140;
+      window.scrollTo({top:y, behavior:'smooth'});
+      if(hit.tagName === 'SUMMARY' && hit.parentElement){
+        hit.parentElement.setAttribute('open','');
+      }
+    } else {
+      feedback.textContent = '没有找到“' + q + '”，试试“羽毛”“安全词”“固定带”“90 秒”等具体词。';
+      feedback.classList.add('show');
+    }
+  }
+  btn.addEventListener('click', doSearch);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  // 导航滚动高亮
+  var navLinks = document.querySelectorAll('nav.main-nav a');
+  var sections = [];
+  navLinks.forEach(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    var sec = document.getElementById(id);
+    if(sec) sections.push({link:a, sec:sec});
+  });
+  function highlight(){
+    var pos = window.scrollY + 160;
+    var current = null;
+    sections.forEach(function(s){
+      if(s.sec.offsetTop <= pos) current = s;
+    });
+    navLinks.forEach(function(a){ a.classList.remove('active'); });
+    if(current) current.link.classList.add('active');
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"审问tk丨vk挠脚心",
+  "description":"聚焦审问情境与脚心感官互动的玩法解析、安全边界与体验记录。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"脚心比脚趾缝更敏感吗？","acceptedAnswer":{"@type":"Answer","text":"个体差异很大。10月12日收集的12份反馈中，7人说脚心更痒，3人选脚趾缝，2人表示差不多。建议第一次各触5秒让tk自己标记。"}},
+    {"@type":"Question","name":"tk一直笑到说不出安全词怎么办？","acceptedAnswer":{"@type":"Answer","text":"把安全信号从口头改成动作。11月5日起的默认规则是手松开即暂停，vk每轮结束复述一次。"}},
+    {"@type":"Question","name":"vk提问用长句还是短句？","acceptedAnswer":{"@type":"Answer","text":"短句。10月26日的19组问答样本里，5字以内提问得到完整回答占68%，20字以上降到29%。"}},
+    {"@type":"Question","name":"细软毛刷适合新手吗？","acceptedAnswer":{"@type":"Answer","text":"可以试，但别连续刷。毛刷在跖骨区域停留超过8秒，多数人会进入不可控发笑阶段，建议先用羽毛或指腹建立节奏。"}},
+    {"@type":"Question","name":"固定带要绑多紧？","acceptedAnswer":{"@type":"Answer","text":"11月7日的对照表分两档：松档适合长时间对话，紧档应激反应更快但沟通成本高。判断标准是脚踝能轻微转动、皮肤不出现压痕。"}},
+    {"@type":"Question","name":"轮次之间休息多久合适？","acceptedAnswer":{"@type":"Answer","text":"5分钟是记录里较常见的间隔。休息后响应速度回升，但对羽毛的耐受也提高，第二轮时长建议下调三成。"}}
+  ]
+}
+</script>
+</body>
+                </html>
