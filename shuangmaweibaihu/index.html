@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>双马尾白虎水晶棒-手作水晶棒选购与定制</title>
+<meta name="description" content="双马尾白虎水晶棒是手工打磨的水晶饰品与摆件，分白虎纹、双马尾造型两类。这里整理材质分级、定制流程、保养方法与真实使用反馈，附尺寸对照和预算参考。">
+<meta name="keywords" content="双马尾白虎水晶棒">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a3b4d'/%3E%3Cpath d='M9 8c2 6 3 10 3 16M23 8c-2 6-3 10-3 16' stroke='%23e8c88a' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='13' r='3.4' fill='%23ffffff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#22303d;
+  --ink-2:#4a5b6b;
+  --ink-3:#6e7f8f;
+  --paper:#f6f3ec;
+  --paper-2:#fffdf8;
+  --line:#ddd6c6;
+  --brand:#2a3b4d;
+  --brand-2:#3d566e;
+  --accent:#b8863f;
+  --accent-soft:#f0e2c6;
+  --frost:#e9f1f4;
+  --rose:#a8576a;
+  --radius:14px;
+  --radius-s:8px;
+  --shadow:0 2px 4px rgba(34,48,61,.05),0 12px 28px rgba(34,48,61,.07);
+  --shadow-s:0 1px 2px rgba(34,48,61,.06),0 4px 12px rgba(34,48,61,.05);
+  --sp:clamp(16px,2.4vw,28px);
+  --maxw:1180px;
+  --font:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,serif;
+  --font-sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --sticky:0px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 80% -10%,#eef3f5 0,rgba(238,243,245,0) 60%),
+    var(--paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--font);line-height:1.35;margin:0}
+p{margin:0 0 .85em}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--sp)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ===== 吸顶公告条 ===== */
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:var(--brand);color:#f2ead9;
+  font-size:13px;letter-spacing:.02em;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.announce .wrap{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;padding-block:8px}
+.announce .tag{background:var(--accent);color:#241a08;font-weight:700;padding:1px 8px;border-radius:99px;font-size:11px}
+.announce a{color:#f3dfae;text-decoration:underline;text-underline-offset:3px}
+
+/* ===== 吸顶页头 ===== */
+header.site{
+  position:sticky;top:34px;z-index:55;
+  background:rgba(246,243,236,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+header.site .wrap{display:flex;align-items:center;gap:18px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:38px;height:38px;flex:0 0 auto}
+.brand .name{font-family:var(--font);font-weight:700;font-size:17px;letter-spacing:.04em;color:var(--brand);white-space:nowrap}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.nav a{
+  font-size:13.5px;padding:6px 10px;border-radius:99px;color:var(--ink-2);
+  white-space:nowrap;transition:background .18s,color .18s;
+}
+.nav a:hover,.nav a.active{background:var(--accent-soft);color:#5c431c;text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.search{
+  display:flex;align-items:center;gap:6px;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:99px;padding:4px 6px 4px 12px;
+}
+.search input{
+  border:0;background:transparent;font:inherit;font-size:13px;width:132px;color:var(--ink);
+  padding:2px 0;outline:none;
+}
+.search button{
+  border:0;background:var(--brand);color:#fff;border-radius:99px;
+  font:inherit;font-size:12px;padding:5px 12px;cursor:pointer;
+}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:var(--paper-2);border-radius:8px;
+  padding:7px 10px;font:inherit;font-size:13px;cursor:pointer;color:var(--brand);
+}
+.search-feedback{font-size:13px;color:var(--rose);padding:4px 2px 0;display:none}
+.search-feedback.on{display:block}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(178deg,#ffffff 0%,#f2f6f7 46%,#f6f3ec 100%);
+  scroll-margin-top:120px;
+}
+.hero .wrap{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:clamp(24px,4vw,56px);align-items:center;
+  padding-block:clamp(36px,5vw,68px);
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.14em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:14px;font-weight:700;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--accent)}
+.hero h1{font-size:clamp(30px,4.6vw,52px);letter-spacing:.03em;color:var(--brand);margin-bottom:.35em}
+.hero .lead{font-size:clamp(14.5px,1.5vw,16.5px);color:var(--ink-2);max-width:34em}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:99px;font-size:14px;font-weight:600;
+  border:1px solid transparent;transition:transform .18s,box-shadow .18s;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn.primary{background:var(--brand);color:#fdf8ee;box-shadow:var(--shadow-s)}
+.btn.ghost{background:var(--paper-2);color:var(--brand);border-color:var(--line)}
+.hero-stats{display:flex;gap:26px;margin-top:28px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-family:var(--font);font-size:22px;color:var(--brand)}
+.hero-stats div span{font-size:12.5px;color:var(--ink-3)}
+.hero-art{position:relative;min-height:300px}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 18px 30px rgba(42,59,77,.13))}
+
+/* ===== 主体布局 ===== */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 268px;gap:clamp(22px,3vw,42px);
+  padding-block:clamp(30px,4vw,52px);align-items:start;
+}
+main{min-width:0}
+aside{position:sticky;top:112px;display:grid;gap:16px}
+section.block{scroll-margin-top:118px;margin-bottom:clamp(34px,4.5vw,58px)}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.block-head h2{font-size:clamp(20px,2.4vw,25px);color:var(--brand)}
+.block-head .meta{font-size:12.5px;color:var(--ink-3)}
+.block-head::after{content:"";flex:1;height:1px;background:var(--line);align-self:center;min-width:30px}
+.sec-note{font-size:13.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+/* ===== 卡片与网格 ===== */
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow-s);
+  transition:transform .2s,box-shadow .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h3{font-size:16px;margin-bottom:6px;color:var(--brand)}
+.card p{font-size:13.5px;color:var(--ink-2);margin-bottom:.5em}
+.card .k{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.06em}
+.card .foot{font-size:12px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:8px;margin-top:10px}
+
+/* 交叉单元 */
+.feature{
+  grid-column:span 2;display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:stretch;
+}
+.feature img{width:100%;height:100%;min-height:130px;border-radius:var(--radius-s);object-fit:cover}
+.feature .body{display:flex;flex-direction:column}
+
+/* 列表 */
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list li{
+  display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;
+  padding:13px 2px;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.list time{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.list a{font-size:14.5px;font-weight:600;color:var(--ink)}
+.list .desc{display:block;font-size:13px;color:var(--ink-3);font-weight:400;margin-top:2px}
+
+/* 频道索引 */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{
+  font-size:13.5px;padding:7px 14px;border-radius:99px;background:var(--paper-2);
+  border:1px solid var(--line);color:var(--ink-2);transition:.18s;
+}
+.chips a:hover{background:var(--brand);color:#fdf8ee;border-color:var(--brand);text-decoration:none}
+.chips a .n{font-size:11px;color:var(--accent);margin-left:6px}
+.chips a:hover .n{color:#f2d9a5}
+
+/* ===== 深度解析 ===== */
+.deep{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(20px,3vw,34px);box-shadow:var(--shadow-s);
+}
+.deep > p:first-of-type{font-size:15.5px;color:var(--ink-2)}
+.deep h3{font-size:17.5px;color:var(--brand);margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--accent)}
+.deep h3:first-of-type{margin-top:16px}
+.deep p{font-size:14.5px;color:#38474f}
+.pull{
+  border-left:3px solid var(--brand-2);background:var(--frost);
+  padding:14px 18px;border-radius:0 var(--radius-s) var(--radius-s) 0;
+  font-family:var(--font);font-size:15.5px;color:var(--brand);margin:18px 0;
+}
+.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.compare caption{text-align:left;font-size:12.5px;color:var(--ink-3);padding-bottom:6px}
+.compare th,.compare td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+.compare th{background:var(--accent-soft);color:#5c431c;font-weight:600;white-space:nowrap}
+.compare td strong{color:var(--rose)}
+
+/* ===== 步骤 ===== */
+.steps{counter-reset:step;display:grid;gap:12px}
+.step{
+  counter-increment:step;background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:14px 18px 14px 62px;position:relative;
+}
+.step::before{
+  content:counter(step);position:absolute;left:16px;top:13px;
+  width:28px;height:28px;border-radius:50%;background:var(--brand);color:#f6e7c6;
+  display:grid;place-items:center;font-size:13.5px;font-weight:700;font-family:var(--font);
+}
+.step h3{font-size:15px;margin-bottom:4px;color:var(--brand)}
+.step p{font-size:13.5px;color:var(--ink-2);margin:0}
+
+/* ===== FAQ ===== */
+.faq{display:grid;gap:10px}
+.faq details{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:2px 16px;
+}
+.faq summary{
+  cursor:pointer;font-size:14.5px;font-weight:600;color:var(--brand);
+  padding:12px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:18px;line-height:1;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:14px;color:var(--ink-2);margin:0 0 14px}
+
+/* ===== 评论 ===== */
+.reviews{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.review{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:15px 17px;
+}
+.review .who{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-3);margin-bottom:7px}
+.review .who b{color:var(--ink);font-weight:600}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--frost);color:var(--brand);display:grid;place-items:center;font-size:12px;font-weight:700}
+.review p{font-size:13.5px;color:var(--ink-2);margin:0}
+.review .stars{color:var(--accent);font-size:12px;letter-spacing:2px}
+
+/* ===== 侧栏 ===== */
+.side-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow-s);
+}
+.side-card h2{font-size:14px;letter-spacing:.08em;color:var(--ink-3);margin-bottom:10px;font-family:var(--font-sans);font-weight:700}
+.side-nav{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.side-nav a{
+  display:block;font-size:13.5px;padding:6px 10px;border-radius:6px;color:var(--ink-2);
+  border-left:2px solid transparent;transition:.15s;
+}
+.side-nav a:hover{background:var(--frost);text-decoration:none}
+.side-nav a.active{background:var(--accent-soft);color:#5c431c;border-left-color:var(--accent);font-weight:600}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.tag-cloud a{font-size:12.5px;padding:4px 10px;border-radius:99px;background:var(--frost);color:var(--brand-2)}
+.tag-cloud a:hover{background:var(--brand);color:#fff;text-decoration:none}
+.side-list{list-style:none;margin:0;padding:0;font-size:13px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
+.side-list li:last-child{border-bottom:0}
+.side-list .d{display:block;font-size:11.5px;color:var(--ink-3)}
+
+/* ===== 时间线 ===== */
+.timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--accent-soft)}
+.timeline li{position:relative;padding:0 0 16px 18px;font-size:13.5px;color:var(--ink-2)}
+.timeline li::before{
+  content:"";position:absolute;left:-24px;top:6px;width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--accent);
+}
+.timeline b{color:var(--brand);font-family:var(--font)}
+
+/* ===== 标签索引 ===== */
+.index-tags{display:flex;flex-wrap:wrap;gap:9px}
+.index-tags a{
+  font-size:13px;padding:6px 13px;border:1px dashed var(--line);border-radius:6px;
+  color:var(--ink-2);background:var(--paper-2);
+}
+.index-tags a:hover{border-style:solid;border-color:var(--brand);color:var(--brand);text-decoration:none}
+
+/* ===== 页脚 ===== */
+footer.site{
+  margin-top:20px;background:var(--brand);color:#cfd8de;font-size:13px;
+  border-top:4px solid var(--accent);
+}
+footer.site .wrap{padding-block:clamp(30px,4vw,48px)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.foot-brand .name{font-family:var(--font);font-size:18px;color:#f6ecd8;letter-spacing:.05em;margin-bottom:8px}
+.foot-brand p{font-size:13px;color:#a9b8c2;max-width:26em}
+.foot-col h3{font-size:13.5px;color:#f2dca8;margin-bottom:10px;letter-spacing:.06em}
+.foot-col ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot-col a{color:#cfd8de}
+.foot-col a:hover{color:#fff}
+.foot-bottom{
+  margin-top:26px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#93a4b0;
+}
+.foot-bottom a{color:#c8d4dc}
+
+/* ===== 回顶 ===== */
+#toTop{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  background:var(--brand);color:#f5e9cf;border:0;border-radius:50%;
+  width:44px;height:44px;font-size:17px;cursor:pointer;box-shadow:var(--shadow);
+  opacity:0;visibility:hidden;transform:translateY(8px);transition:.22s;
+}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+
+/* ===== 响应式 ===== */
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside{position:static;grid-row:2}
+  .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero .wrap{grid-template-columns:minmax(0,1fr)}
+  .hero-art{order:-1;max-width:420px;min-height:0}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .feature{grid-column:span 2;grid-template-columns:130px minmax(0,1fr)}
+}
+@media (max-width:760px){
+  header.site{top:0}
+  .announce{position:static}
+  .nav{display:none;order:5;width:100%;margin-left:0;padding-top:6px}
+  .nav.open{display:flex}
+  .menu-btn{display:inline-block}
+  .search input{width:96px}
+  .g3,.g2,.reviews{grid-template-columns:minmax(0,1fr)}
+  .feature{grid-column:span 1;grid-template-columns:minmax(0,1fr)}
+  .feature img{height:150px}
+  .list li{grid-template-columns:74px minmax(0,1fr);gap:10px}
+  .foot-grid{grid-template-columns:1fr}
+  #toTop{width:40px;height:40px;right:12px;bottom:12px}
+  section.block{scroll-margin-top:96px}
+}
+@media (max-width:400px){
+  .search{display:none}
+  .brand .name{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span>11月5日上新：白虎纹六棱棒 12cm 补货 34 支，双马尾雕花款开放 20 个定制名额</span>
+    <a href="/#latest">查看本次到货明细</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="双马尾白虎水晶棒 首页">
+      <svg viewBox="0 0 40 40" role="img" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="#2a3b4d"/>
+        <path d="M12 9c1.8 7 3.4 13 3.4 21M28 9c-1.8 7-3.4 13-3.4 21" stroke="#e8c88a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <circle cx="20" cy="16" r="4.2" fill="#fffdf8"/>
+        <path d="M15.8 16h8.4M20 11.8v8.4" stroke="#2a3b4d" stroke-width=".9" opacity=".55"/>
+        <path d="M16.5 26c2 2.2 5 2.2 7 0" stroke="#e9f1f4" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="name">双马尾白虎水晶棒</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteNav">栏目菜单</button>
+    <nav class="nav" id="siteNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picked">精选推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#reviews">玩家评论</a>
+      <a href="/#news">相关资讯</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search">
+        <label for="q" style="position:absolute;left:-9999px">站内搜索</label>
+        <input id="q" type="search" placeholder="搜白虎纹 / 雕花 / 尺寸" autocomplete="off">
+        <button type="button" id="qBtn">查找</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><div class="search-feedback" id="qFb" role="status" aria-live="polite"></div></div>
+</header>
+
+<div id="top"></div>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Hand-carved Crystal Rod</span>
+      <h1>双马尾白虎水晶棒</h1>
+      <p class="lead">手工打磨的收藏级水晶棒，以白虎纹路与双马尾雕花两种形态为主，长度从 9cm 到 24cm，常见材质为白水晶、金曜石与冰裂纹石英。页面整理尺寸对照、材质分级、定制流程与真实开箱记录，方便按预算和用途挑选。</p>
+      <div class="cta">
+        <a class="btn primary" href="/#picked">看本周精选 8 款</a>
+        <a class="btn ghost" href="/#guide">定制流程与保养</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>42</strong><span>在售款式</span></div>
+        <div><strong>6</strong><span>主流长度档</span></div>
+        <div><strong>3</strong><span>材质等级</span></div>
+        <div><strong>11.08</strong><span>本页更新日</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 340" role="img">
+        <defs>
+          <linearGradient id="rodA" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset=".45" stop-color="#e7eff2"/>
+            <stop offset="1" stop-color="#c9d8de"/>
+          </linearGradient>
+          <linearGradient id="rodB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3d566e"/>
+            <stop offset="1" stop-color="#22303d"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="210" cy="300" rx="150" ry="20" fill="#dfe7ea" opacity=".7"/>
+        <g transform="rotate(-16 210 170)">
+          <rect x="176" y="42" width="34" height="212" rx="17" fill="url(#rodA)" stroke="#b9c9d0"/>
+          <path d="M186 60c6 18 7 36 6 56M200 80c-5 20-5 40-4 60M190 150c5 16 5 30 4 44" stroke="#a9bcc4" stroke-width="1.2" fill="none" opacity=".85"/>
+          <circle cx="193" cy="36" r="13" fill="#fffdf8" stroke="#d8c79e"/>
+          <path d="M182 30c3 6 4 10 4 16M204 30c-3 6-4 10-4 16" stroke="#c9a96a" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </g>
+        <g transform="rotate(12 260 190)">
+          <rect x="252" y="86" width="26" height="176" rx="13" fill="url(#rodB)" opacity=".92"/>
+          <rect x="258" y="100" width="5" height="140" rx="3" fill="#7b93a6" opacity=".6"/>
+          <circle cx="265" cy="80" r="11" fill="#e9f1f4" stroke="#9fb4c0"/>
+          <path d="M256 76c2 4 3 8 3 12M274 76c-2 4-3 8-3 12" stroke="#4a5b6b" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        </g>
+        <g stroke="#c9a96a" stroke-width="1.4" fill="none" opacity=".8">
+          <path d="M96 96c14 10 20 24 20 40"/>
+          <path d="M330 120c-12 12-16 26-15 42"/>
+          <circle cx="116" cy="140" r="3.4" fill="#e8c88a" stroke="none"/>
+          <circle cx="314" cy="166" r="3.4" fill="#e8c88a" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+
+  <main>
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview">
+      <div class="block-head"><h2>领域概览：两类形态与三条价格带</h2><span class="meta">11月8日整理</span></div>
+      <p class="sec-note">水晶棒按外观分白虎纹与双马尾雕花两类，前者靠石料天然纹与抛光面，后者靠手工开槽与嵌件工艺。价格主要由长度、净度、雕工决定。</p>
+      <div class="grid g3">
+        <article class="card">
+          <span class="k">入门 9—12cm</span>
+          <h3>白虎纹直棒</h3>
+          <p>白水晶与冰裂石英为主，净度二级，表面做雾面拉丝。适合日常手持，单支 68—140 元。10月28日上架的 12cm 六棱款单周售出 51 支。</p>
+          <div class="foot">平均克重 38g｜常见瑕疵：内部棉絮</div>
+        </article>
+        <article class="card">
+          <span class="k">进阶 15—18cm</span>
+          <h3>双马尾雕花棒</h3>
+          <p>金曜石底料配银丝嵌线，人工开三条弧槽，末段收成两束。工时约 4.5 小时，标价 280—460 元，定制周期 9 天。</p>
+          <div class="foot">平均克重 96g｜可加刻姓名首字</div>
+        </article>
+        <article class="card">
+          <span class="k">收藏 20—24cm</span>
+          <h3>白虎纹满花长棒</h3>
+          <p>选用整料无裂白石英，纹路连续性要求 80% 以上，通常配木盒与证书。11月3日一件 22cm 满花样品以 1280 元成交。</p>
+          <div class="foot">平均克重 185g｜需称重确认</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2 精选推荐 -->
+    <section class="block" id="picked">
+      <div class="block-head"><h2>精选内容推荐：本周 6 个值得看的条目</h2><span class="meta">编辑自 11月1日—11月7日</span></div>
+      <div class="grid g3">
+        <article class="card feature">
+          <img src="https://picsum.photos/seed/crystalrod-baihu/300/220" width="300" height="220" loading="lazy" alt="白虎纹六棱水晶棒摆放在灰麻布上的实拍" style="object-fit:cover">
+          <div class="body">
+            <span class="k">开箱记录</span>
+            <h3>12cm 白虎纹六棱棒到手：纹路、重量与握感</h3>
+            <p>收货实测 41.2g，与页面标注 40g 差 1.2g。三道主纹从棒身 1/3 处贯通至尾端，雾面区在强光下有细微反光。玩家“苏木”在 11月5日发了 9 张细节图。</p>
+            <div class="foot">阅读约 4 分钟｜含尺寸对照表</div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="k">选购方法</span>
+          <h3>同一价位，长度和净度怎么取舍</h3>
+          <p>300 元预算下，16cm 二级净度与 13cm 一级净度的实际使用差异，来自 23 次对比试握的结论。</p>
+          <div class="foot">作者：木匣工作室</div>
+        </article>
+        <article class="card">
+          <span class="k">工艺拆解</span>
+          <h3>双马尾弧形槽的三道工序</h3>
+          <p>定位、粗开、细修。粗开用 80 目磨头，细修换 400 目，最后手工抛光 40 分钟，槽深控制在 1.2mm。</p>
+          <div class="foot">附工序时间表</div>
+        </article>
+        <article class="card">
+          <span class="k">价格观察</span>
+          <h3>10月金曜石原料涨了 11%</h3>
+          <p>三家电镀厂报价单对比，18cm 雕花款成本上升 26—38 元，部分店铺已从 10月30日起调价。</p>
+          <div class="foot">来源：三份进货单</div>
+        </article>
+        <article class="card">
+          <span class="k">保养</span>
+          <h3>冰裂纹石英的清洗禁区</h3>
+          <p>超声波清洗会让已有微裂扩展。改用软毛刷加中性皂液，1 分钟冲净，阴干 6 小时。</p>
+          <div class="foot">实测 5 支对比</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="latest">
+      <div class="block-head"><h2>最新更新：到货、调价与补货</h2><span class="meta">近 30 天</span></div>
+      <ul class="list">
+        <li><time datetime="2026-11-07">11月7日</time><div><a href="/#deep">白虎纹六棱棒 12cm 补货 34 支</a><span class="desc">本次到货净度二级 29 支、一级 5 支，一级单支标价 218 元。</span></div></li>
+        <li><time datetime="2026-11-05">11月5日</time><div><a href="/#guide">双马尾雕花款开放 20 个定制名额</a><span class="desc">刻字费 30 元/字，最多 3 字。排单已到 11月19日。</span></div></li>
+        <li><time datetime="2026-11-03">11月3日</time><div><a href="/#picked">22cm 满花白石英长棒成交 1280 元</a><span class="desc">整料 187g，纹路连续度 86%，随盒附检测卡。</span></div></li>
+        <li><time datetime="2026-10-30">10月30日</time><div><a href="/#picked">金曜石系列整体上调 8%</a><span class="desc">18cm 雕花棒由 388 元调至 420 元，三家店铺同步。</span></div></li>
+        <li><time datetime="2026-10-26">10月26日</time><div><a href="/#faq">新增尺寸对照图，覆盖 9—24cm 六档</a><span class="desc">标出手掌宽度 7.5cm 对应推荐长度 12—15cm。</span></div></li>
+        <li><time datetime="2026-10-19">10月19日</time><div><a href="/#reviews">回收玩家反馈 128 条，整理出 4 类常见瑕疵</a><span class="desc">棉絮、微裂、槽偏、色带不匀，占比依次为 41%、23%、21%、15%。</span></div></li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="channels">
+      <div class="block-head"><h2>分类入口：按形态、材质与预算找</h2><span class="meta">10 个频道</span></div>
+      <div class="chips">
+        <a href="/#overview">白虎纹直棒<span class="n">14</span></a>
+        <a href="/#overview">双马尾雕花棒<span class="n">9</span></a>
+        <a href="/#picked">白水晶二级净度<span class="n">11</span></a>
+        <a href="/#picked">金曜石嵌银丝<span class="n">6</span></a>
+        <a href="/#picked">冰裂纹石英<span class="n">7</span></a>
+        <a href="/#guide">15cm 日常款<span class="n">12</span></a>
+        <a href="/#guide">22cm 收藏款<span class="n">4</span></a>
+        <a href="/#guide">刻字定制<span class="n">8</span></a>
+        <a href="/#faq">雾面与镜面区分<span class="n">3</span></a>
+        <a href="/#reviews">开箱实拍<span class="n">26</span></a>
+      </div>
+      <p class="sec-note" style="margin-top:14px">数字为该分类当前收录条目数，会随补货与下架变化。</p>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deep">
+      <div class="block-head"><h2>深度解析：长度不是唯一变量，槽深与净度决定手感</h2><span class="meta">观点｜可核对</span></div>
+      <div class="deep">
+        <p>收藏圈里流行一句话——“越长越值”。放在白虎纹长棒上成立，放在双马尾雕花款上就未必。18cm 雕花棒的成交价能否高过 15cm 同款，取决于开槽深度和槽线偏移量这两个更细的指标。</p>
+
+        <h3>判断一：槽深 1.0—1.2mm 是分水岭</h3>
+        <p>木匣工作室在 10月12日到 10月24日之间做了 30 支同料对比：槽深 0.8mm 的 10 支，握持时指腹几乎感知不到束线；槽深 1.1mm 的 12 支，反馈集中在“有清晰的两束感”；槽深超过 1.4mm 的 8 支，有 5 支在跌落测试后出现槽缘崩口。槽深做法工时长，粗开一项就多用 25 分钟，所以同长度下价差通常在 60—90 元。</p>
+
+        <h3>判断二：净度一级的溢价在 13cm 段最明显</h3>
+        <p>把 10月的成交记录按长度分组，一级净度相对二级的溢价如下表。13cm 段溢价 46%，18cm 段只有 18%。原因是长棒整料难得，一级净度的长棒本来就少，买家对瑕疵的容忍度反而提高。</p>
+        <table class="compare">
+          <caption>2026年10月白水晶棒成交均价比（一级 ÷ 二级）</caption>
+          <thead><tr><th>长度</th><th>样本数</th><th>溢价</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>9—12cm</td><td>37</td><td>+31%</td><td>入门段选择多，价差被压窄</td></tr>
+            <tr><td>13—15cm</td><td>29</td><td><strong>+46%</strong></td><td>手感刚需段，一级最抢手</td></tr>
+            <tr><td>16—18cm</td><td>21</td><td>+18%</td><td>长料稀缺，二级也被接受</td></tr>
+            <tr><td>20cm 以上</td><td>9</td><td>+12%</td><td>以纹路连续性定价，净度权重下降</td></tr>
+          </tbody>
+        </table>
+
+        <h3>判断三：雾面处理在 15cm 以上开始吃亏</h3>
+        <p>雾面让白虎纹更柔，但长棒表面积大，雾面区更容易留下指纹和油光。11月1日一位玩家“白栎”反馈：15cm 雾面款用 12 天后，中段出现明显亮斑，需要每周用超细纤维布擦一次。同长度的镜面款反而只要随手一擦。所以 15cm 以上优先镜面，12cm 以下雾面更耐看——这是目前多数店铺的备货逻辑，也是 11月补货单里 12cm 雾面与 18cm 镜面各占多数的原因。</p>
+
+        <div class="pull">“槽深不到 1mm 的雕花棒，本质上还是一根直棒，只是多了两道划痕。”——木匣工作室 10月26日工艺说明会上的原话，现场 14 人，3 人认为说得过重。</div>
+
+        <h3>可核对的三个数字</h3>
+        <p>要验证上面的判断，可以自己核对：一，用游标卡尺量槽深，取三点平均；二，称重后与页面标注克重比对，差超 3% 可要求复检；三，用手机微距拍纹路连续段，连续长度除以总长得出连续度。三项都记下来，再谈价格是否合理，比只看长度可靠。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="block-head"><h2>体验指南：从下单到保养的五步</h2><span class="meta">适用于定制款</span></div>
+      <div class="steps">
+        <div class="step">
+          <h3>确定长度与握法</h3>
+          <p>手掌宽度 7.5cm 选 12—15cm；习惯整掌握持选 16—18cm。先在纸上画长度，比看参数直观。</p>
+        </div>
+        <div class="step">
+          <h3>选材质与净度</h3>
+          <p>白水晶透光好看但棉絮明显；金曜石压手、适合嵌银丝。一级净度适合送人，二级自用足够。</p>
+        </div>
+        <div class="step">
+          <h3>下单与刻字</h3>
+          <p>刻字限 3 字以内，30 元/字。10月28日起刻字位置固定在尾端 1.5cm 处，不再接受中段刻字。</p>
+        </div>
+        <div class="step">
+          <h3>验收三项</h3>
+          <p>称重、量槽深、看纹路连续度。三项记录发回店家，可申请一次免费返修，周期 7 天。</p>
+        </div>
+        <div class="step">
+          <h3>日常保养</h3>
+          <p>软毛刷加中性皂液，1 分钟冲净，阴干 6 小时。避免超声波清洗与暴晒，冰裂纹款尤其注意。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <div class="block-head"><h2>常见问题</h2><span class="meta">据 128 条反馈整理</span></div>
+      <div class="faq">
+        <details>
+          <summary>白虎纹是天然形成的吗，还是人工做上去的？</summary>
+          <p>白水晶棒上的白虎纹分两种：天然色带与生长纹，边界柔和、深浅过渡自然；人工纹多由酸碱蚀刻或喷砂做出，边缘发白、走向过于规整。11月3日的一支 22cm 样品经显微镜观察，纹路在 40 倍下仍有颗粒感，判断为天然纹。要求店家提供未修图的侧光照片可初步分辨。</p>
+        </details>
+        <details>
+          <summary>双马尾雕花棒的双束为什么有的偏左有的偏右？</summary>
+          <p>偏束来自开槽定位，手工操作下允许 ±0.6mm 偏差。超过 1mm 属于工艺瑕疵，可要求返修。10月19日回收的反馈里，槽偏占瑕疵总数的 21%，集中在 18cm 以上长款。</p>
+        </details>
+        <details>
+          <summary>15cm 和 18cm 日常用差别大吗？</summary>
+          <p>重量差约 30g，握持时重心位置不同。15cm 重心靠近中部，单手操作灵活；18cm 重心偏尾端，适合双手或托握。手掌宽度不足 7.5cm 的人用 18cm 会觉得吃力。</p>
+        </details>
+        <details>
+          <summary>冰裂纹石英能用水洗吗？</summary>
+          <p>可以短时冲洗，但不能泡。微裂在持续浸水后可能扩展，尤其水温超过 40℃ 时。建议软毛刷蘸皂液刷 1 分钟，立即冲净，阴干 6 小时以上。</p>
+        </details>
+        <details>
+          <summary>刻字会影响结构强度吗？</summary>
+          <p>尾端 1.5cm 处刻字深度控制在 0.3mm 以内，对强度影响可忽略。但中段刻字会切断纹路，也容易成为应力点，所以 10月28日起不再接受中段刻字。</p>
+        </details>
+        <details>
+          <summary>一级净度和二级净度，差价多少算合理？</summary>
+          <p>13—15cm 段溢价 46% 在 10月成交记录里属正常区间；超过 65% 就偏高。20cm 以上因长料稀缺，溢价 12%—18% 也常见，不必按短款比例套算。</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="reviews">
+      <div class="block-head"><h2>玩家评论：开箱之后说什么</h2><span class="meta">6 条精选</span></div>
+      <div class="reviews">
+        <article class="review">
+          <div class="who"><span class="avatar">苏</span><b>苏木</b><span class="stars">★★★★★</span></div>
+          <p>12cm 六棱白虎纹到手 41.2g，纹路三道贯通，雾面手感比想象中细。唯一遗憾是尾端有一处 2mm 的棉絮，侧光才看得到，自用不影响。</p>
+        </article>
+        <article class="review">
+          <div class="who"><span class="avatar">白</span><b>白栎</b><span class="stars">★★★☆☆</span></div>
+          <p>15cm 雾面款用了 12 天，中段油光明显，每周得擦一次。镜面款同长度就没这个问题。雾面好看，但长款要慎选。</p>
+        </article>
+        <article class="review">
+          <div class="who"><span class="avatar">林</span><b>林间小径</b><span class="stars">★★★★☆</span></div>
+          <p>定制刻字排了 9 天，比页面写的 7 天晚两天，店家提前说明了。槽深量下来 1.05mm，符合预期，双束感清楚。</p>
+        </article>
+        <article class="review">
+          <div class="who"><span class="avatar">周</span><b>周屿</b><span class="stars">★★☆☆☆</span></div>
+          <p>18cm 雕花款槽偏了约 1.2mm，肉眼能看出两边不等宽，返修花了 11 天。工艺可以，品控稳定性一般。</p>
+        </article>
+        <article class="review">
+          <div class="who"><span class="avatar">陈</span><b>陈默</b><span class="stars">★★★★★</span></div>
+          <p>22cm 满花那支我看了实物，纹路连续度确实高，侧光下发丝一样的细纹从头部贯到尾端。价格贵，但这个料子确实难找。</p>
+        </article>
+        <article class="review">
+          <div class="who"><span class="avatar">禾</span><b>禾木</b><span class="stars">★★★★☆</span></div>
+          <p>买给朋友当生日礼物，金曜石 16cm，压手、颜色沉。就是包装盒偏简单，说是升级版木盒实际是贴皮纸盒，这点和描述不太一致。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-head"><h2>相关资讯：原料、工艺与展会</h2><span class="meta">10月—11月</span></div>
+      <ul class="list">
+        <li><time datetime="2026-11-06">11月6日</time><div><a href="/#deep">金曜石原料报价上调 11%，三家电镀厂同步</a><span class="desc">对比 10月12日与 11月5日两份报价单，18cm 雕花款成本上升 26—38 元。</span></div></li>
+        <li><time datetime="2026-11-02">11月2日</time><div><a href="/#guide">手工开槽工时标准更新：细修换 400 目磨头</a><span class="desc">木匣工作室公布新工序表，单支抛光时间由 35 分钟增至 40 分钟。</span></div></li>
+        <li><time datetime="2026-10-27">10月27日</time><div><a href="/#picked">冰裂纹石英清洗争议：超声波是否伤料</a><span class="desc">5 支对比测试中 3 支微裂扩展，2 支无变化，结论尚未统一。</span></div></li>
+        <li><time datetime="2026-10-21">10月21日</time><div><a href="/#reviews">128 条玩家反馈整理：棉絮是第一大瑕疵</a><span class="desc">占 41%，其次微裂 23%、槽偏 21%、色带不匀 15%。</span></div></li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="related">
+      <div class="block-head"><h2>相关推荐：搜索词与对应条目</h2><span class="meta">按搜索热度排列</span></div>
+      <div class="index-tags">
+        <a href="/#overview">白虎纹水晶棒怎么选</a>
+        <a href="/#guide">双马尾雕花棒定制流程</a>
+        <a href="/#deep">水晶棒槽深测量方法</a>
+        <a href="/#picked">15cm 白水晶日常款</a>
+        <a href="/#picked">金曜石嵌银丝 18cm</a>
+        <a href="/#faq">冰裂纹石英能水洗吗</a>
+        <a href="/#guide">水晶棒刻字位置规定</a>
+        <a href="/#reviews">白虎纹满花长棒开箱</a>
+        <a href="/#deep">一级净度溢价多少合理</a>
+        <a href="/#latest">11月补货与调价记录</a>
+      </div>
+    </section>
+
+    <!-- 11 补充板块：时间线 + 可信度分层 -->
+    <section class="block" id="timeline">
+      <div class="block-head"><h2>时间线：一条 18cm 雕花棒的 27 天</h2><span class="meta">10月11日—11月7日</span></div>
+      <ol class="timeline">
+        <li><b>10月11日</b>　选料：金曜石整料 104g，测密度 2.62，无外部裂。</li>
+        <li><b>10月14日</b>　粗开：80 目磨头开出三条弧槽，单槽深 1.3mm，预留修整量。</li>
+        <li><b>10月18日</b>　细修：换 400 目磨头，槽深降到 1.1mm，槽缘倒角 0.2mm。</li>
+        <li><b>10月23日</b>　嵌银丝：0.4mm 银丝压入槽底，胶层固化 12 小时。</li>
+        <li><b>10月28日</b>　抛光：手工 40 分钟，镜面区占棒身 70%，尾端保留雾面。</li>
+        <li><b>11月1日</b>　验收称重：97.4g，比预估轻 6.6g，记录在案。</li>
+        <li><b>11月5日</b>　买家收货，反馈槽深符合预期，银丝在第二道槽有 1mm 起翘。</li>
+        <li><b>11月7日</b>　返修寄出，处理银丝压合，周期 5 天。</li>
+      </ol>
+      <p class="sec-note" style="margin-top:14px">可信度分层：选料、粗开、细修、抛光四项有工序单可查；嵌银丝与验收称重为店家口述，未见原始单据；买家反馈有聊天截图。</p>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside aria-label="侧栏导航与索引">
+    <div class="side-card">
+      <h2>栏目导航</h2>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picked">精选推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#reviews">玩家评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+        <li><a href="/#timeline">制作时间线</a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h2>热门搜索词</h2>
+      <div class="tag-cloud">
+        <a href="/#overview">白虎纹</a>
+        <a href="/#overview">双马尾雕花</a>
+        <a href="/#guide">15cm</a>
+        <a href="/#picked">金曜石</a>
+        <a href="/#picked">冰裂纹</a>
+        <a href="/#deep">槽深</a>
+        <a href="/#faq">净度</a>
+        <a href="/#guide">刻字</a>
+        <a href="/#reviews">开箱</a>
+      </div>
+    </div>
+    <div class="side-card">
+      <h2>本月数据点</h2>
+      <ul class="side-list">
+        <li>12cm 六棱款售出 51 支<span class="d">10月28日—11月4日</span></li>
+        <li>一级净度溢价最高 46%<span class="d">13—15cm 段</span></li>
+        <li>瑕疵反馈占比 41% 为棉絮<span class="d">128 条样本</span></li>
+        <li>定制排单至 11月19日<span class="d">11月5日数据</span></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">双马尾白虎水晶棒</div>
+        <p>记录白虎纹与雕花水晶棒的长度、净度、槽深与成交价，给挑选和验收一个可核对的依据。</p>
+      </div>
+      <div class="foot-col">
+        <h3>选购</h3>
+        <ul>
+          <li><a href="/#overview">形态与价格带</a></li>
+          <li><a href="/#picked">本周精选</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#latest">补货与调价</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>判断</h3>
+        <ul>
+          <li><a href="/#deep">槽深与净度</a></li>
+          <li><a href="/#guide">定制五步</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#timeline">制作时间线</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>反馈</h3>
+        <ul>
+          <li><a href="/#reviews">玩家评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">搜索词索引</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>页面内容含示例条目与成交数据，购买前请以店家实物图与工序单为准。更新时间：2026年11月8日（对应 11月7日补货、11月5日定制名额、11月3日成交记录）。</span>
+      <span>© 2026 双马尾白虎水晶棒 · 手工水晶棒资料整理</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('siteNav');
+  menuBtn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.innerWidth<760){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+
+  /* 回到顶部 */
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    toTop.classList.toggle('show',window.scrollY>560);
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var links=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=links.map(function(a){
+    var id=a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos=window.scrollY+160;
+    var idx=-1;
+    targets.forEach(function(el,i){
+      if(el && el.offsetTop<=pos) idx=i;
+    });
+    links.forEach(function(a,i){a.classList.toggle('active',i===idx);});
+  }
+  window.addEventListener('scroll',highlight,{passive:true});
+  highlight();
+
+  /* 本地搜索 */
+  var q=document.getElementById('q');
+  var btn=document.getElementById('qBtn');
+  var fb=document.getElementById('qFb');
+  var cache=null;
+  function buildIndex(){
+    if(cache) return cache;
+    var nodes=document.querySelectorAll('main h2, main h3, main .card, main .list li, main .faq details, main .review, main .index-tags a, main .step');
+    var arr=[];
+    nodes.forEach(function(n){
+      var t=(n.textContent||'').replace(/\s+/g,' ').trim();
+      if(t) arr.push({el:n,text:t.toLowerCase()});
+    });
+    cache=arr;
+    return arr;
+  }
+  function find(){
+    var kw=(q.value||'').trim().toLowerCase();
+    if(!kw){
+      fb.classList.remove('on');
+      fb.textContent='';
+      return;
+    }
+    var hits=buildIndex().filter(function(o){return o.text.indexOf(kw)>-1;});
+    if(!hits.length){
+      fb.classList.add('on');
+      fb.textContent='没有找到“'+kw+'”相关内容，换个词试试：白虎纹、槽深、15cm、金曜石、刻字。';
+      return;
+    }
+    fb.classList.remove('on');
+    fb.textContent='';
+    var first=hits[0].el;
+    first.scrollIntoView({behavior:'smooth',block:'center'});
+    first.animate?first.animate(
+      [{outline:'3px solid rgba(184,134,63,.85)',outlineOffset:'4px'},
+       {outline:'3px solid rgba(184,134,63,0)'}],
+      {duration:1400}
+    ):null;
+  }
+  btn.addEventListener('click',find);
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();find();}});
+  q.addEventListener('input',function(){if(!q.value.trim()){fb.classList.remove('on');fb.textContent='';}});
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"双马尾白虎水晶棒",
+  "inLanguage":"zh-CN",
+  "description":"白虎纹与双马尾雕花水晶棒的长度、净度、槽深与成交价记录。",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"/?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"白虎纹是天然形成的吗，还是人工做上去的？","acceptedAnswer":{"@type":"Answer","text":"白水晶棒上的白虎纹分天然色带与生长纹、人工蚀刻或喷砂两类。天然纹边界柔和、过渡自然；人工纹边缘发白、走向规整。可要求店家提供未修图侧光照片初步分辨。"}},
+    {"@type":"Question","name":"双马尾雕花棒的双束为什么有的偏左有的偏右？","acceptedAnswer":{"@type":"Answer","text":"偏束来自开槽定位，手工操作允许 ±0.6mm 偏差，超过 1mm 属工艺瑕疵可要求返修。反馈中槽偏占瑕疵总数 21%，集中在 18cm 以上长款。"}},
+    {"@type":"Question","name":"15cm 和 18cm 日常用差别大吗？","acceptedAnswer":{"@type":"Answer","text":"重量差约 30g，重心位置不同。15cm 重心靠中，单手灵活；18cm 重心偏尾，适合双手托握。手掌宽度不足 7.5cm 的人用 18cm 会吃力。"}},
+    {"@type":"Question","name":"冰裂纹石英能用水洗吗？","acceptedAnswer":{"@type":"Answer","text":"可短时冲洗但不能泡。微裂在持续浸水后可能扩展，水温超过 40℃ 时更明显。建议软毛刷蘸中性皂液刷 1 分钟，立即冲净，阴干 6 小时以上。"}},
+    {"@type":"Question","name":"刻字会影响结构强度吗？","acceptedAnswer":{"@type":"Answer","text":"尾端 1.5cm 处刻字深度控制在 0.3mm 以内，对强度影响可忽略。中段刻字会切断纹路并可能成为应力点，因此不再接受中段刻字。"}},
+    {"@type":"Question","name":"一级净度和二级净度，差价多少算合理？","acceptedAnswer":{"@type":"Answer","text":"13—15cm 段溢价 46% 属正常区间，超过 65% 偏高。20cm 以上因长料稀缺，溢价 12%—18% 也常见，不必按短款比例套算。"}}
+  ]
+}
+</script>
+</body>
+</html>
